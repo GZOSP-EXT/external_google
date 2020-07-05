@@ -10,7 +10,7 @@ import android.provider.MediaStore;
 import android.provider.Settings;
 import android.text.TextUtils;
 
-import com.android.internal.util.gzosp.GzospUtils;
+import com.android.internal.util.tesla.TeslaUtils;
 import com.android.systemui.Dependency;
 import com.android.systemui.assist.AssistManager;
 
@@ -46,7 +46,7 @@ public class CustomActions extends Action {
             default:
                 break;
             case 1: // Assistant
-                GzospUtils.switchScreenOn(getContext());
+                TeslaUtils.switchScreenOn(getContext());
                 mAssistManager.startAssist(new Bundle() /* args */);
                 break;
             case 2: // Voice search
@@ -55,38 +55,38 @@ public class CustomActions extends Action {
                 }
                 break;
             case 3: // Camera
-                GzospUtils.switchScreenOn(getContext());
+                TeslaUtils.switchScreenOn(getContext());
                 launchCamera(getContext());
                 break;
             case 4: // Flashlight
-                GzospUtils.toggleCameraFlash();
+                TeslaUtils.toggleCameraFlash();
                 break;
             case 5: // Clear notifications
-                // GzospUtils.clearAllNotifications();
+                // TeslaUtils.clearAllNotifications();
                 break;
             case 6: // Volume panel
                 if (isScreenOn) {
-                    GzospUtils.toggleVolumePanel(getContext());
+                    TeslaUtils.toggleVolumePanel(getContext());
                 }
                 break;
             case 7: // Screen off
                 if (isScreenOn) {
-                    GzospUtils.switchScreenOff(getContext());
+                    TeslaUtils.switchScreenOff(getContext());
                 }
                 break;
             case 8: // Notification panel
                 if (isScreenOn) {
-                    // GzospUtils.toggleNotifications();
+                    // TeslaUtils.toggleNotifications();
                 }
                 break;
             case 9: // Screenshot
                 if (isScreenOn) {
-                    GzospUtils.takeScreenshot(true);
+                    TeslaUtils.takeScreenshot(true);
                 }
                 break;
             case 10: // QS panel
                 if (isScreenOn) {
-                    // GzospUtils.toggleQsPanel();
+                    // TeslaUtils.toggleQsPanel();
                 }
                 break;
             case 11: // Application
@@ -95,7 +95,7 @@ public class CustomActions extends Action {
                 }
                 break;
             case 12: // Ringer modes
-                // GzospUtils.toggleRingerModes(getContext());
+                // TeslaUtils.toggleRingerModes(getContext());
                 break;
         }
     }

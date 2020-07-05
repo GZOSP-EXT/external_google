@@ -22,7 +22,7 @@ public class WakeScreenGestureSettings extends DashboardFragment {
     }
 
     public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.VALIDUS;
+        return MetricsProto.MetricsEvent.TESLA;
     }
 
     public int getPreferenceScreenResId() {
